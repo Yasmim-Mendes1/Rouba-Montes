@@ -98,8 +98,8 @@ No geral, a complexidade do programa é dominada pela ordenação dos jogadores,
 
 ## Como Utilizar o Programa:
 1. **Compilar o Código:**
-   - Copie e cole o código C em um arquivo com extensão `.c`.
-   - Compile o código utilizando um compilador C, como o GCC (GNU Compiler Collection).
+   - Copie e cole o código C em um arquivo com extensão '.c'.
+   - Compile o código utilizando um compilador C.
 2. **Executar o Programa:**
    - Após a compilação, execute o programa.
 3. **Entrada de Dados:**
