@@ -49,14 +49,14 @@ O código em C apresenta a implementação do "Rouba Montes", um jogo de cartas 
 6. **ElementoLista**: Elemento da lista que armazena uma carta e uma referência ao próximo elemento.
 7. **Lista**: Estrutura de dados do tipo lista encadeada, contendo um ponteiro para o início.
 8. **Jogador**: Estrutura que representa um jogador, contendo um identificador, nome e uma pilha de cartas.
-
 <br>
+
 ## Formato de Entrada dos Dados:
 1. **Quantidade de Jogadores (`njogadores`):** O usuário deve informar a quantidade de jogadores que participarão do jogo.
 2. **Informações dos Jogadores:** Para cada jogador, o usuário é solicitado a fornecer o nome do jogador.
 3. **Quantidade de Baralhos (`nbaralhos`):** O usuário informa a quantidade de baralhos utilizados no jogo. Um baralho padrão contém 52 cartas.
-
 <br>
+
 ## Formato de Saída dos Dados:
 1. **Informações Iniciais:**
    - Regras do jogo são exibidas.
@@ -77,23 +77,25 @@ O código em C apresenta a implementação do "Rouba Montes", um jogo de cartas 
    - Fim de jogo é declarado.
    - Jogadores são classificados pelo número de cartas acumuladas.
    - Ranking é exibido com o número de cartas e as cartas de cada jogador.
-
 <br>
+
 ## Complexidade:
 1. **Empilhar Embaralhado:**
-   - Complexidade de tempo: O(nbaralhos * 52), onde nbaralhos é o número de baralhos utilizados.
-   - Justificativa: A função percorre cada carta em todos os baralhos, realizando operações como atribuição e troca de elementos.
+   - A função percorre cada carta em todos os baralhos, realizando operações como atribuição e troca de elementos.
+   - Complexidade: O(nbaralhos * 52), onde nbaralhos é o número de baralhos utilizados.
 2. **Avançar Turno:**
-   - Complexidade de tempo: O(1)
-   - Justificativa: A função envolve apenas operações de enfileiramento e desenfileiramento, ambas operações de tempo constante.
+   - A função envolve apenas operações de enfileiramento e desenfileiramento, ambas operações de tempo constante.
+   - Complexidade: O(1).
 3. **Diferente:**
-   - Complexidade de tempo: O(njogadores * 52)
-   - Justificativa: A função envolve iterações sobre o vetor de jogadores, cada uma envolvendo operações em pilhas que podem conter até 52 cartas.
+   - A função envolve iterações sobre o vetor de jogadores, cada uma envolvendo operações em pilhas que podem conter até 52.
+   - Complexidade de tempo: O(njogadores * 52).
 4. **Ordenar Jogadores (Quicksort):**
-   - Complexidade de tempo: O(njogadores * log(njogadores))
-   - Justificativa: O algoritmo de ordenação Quicksort tem uma complexidade média de O(n * log(n)), onde n é o número de elementos.
-
+   - O algoritmo de ordenação Quicksort tem uma complexidade média de O(n * log(n)), onde n é o número de elementos.
+   - Complexidade: O(njogadores * log(njogadores)).
+  
+No geral, a complexidade do programa é dominada pela ordenação dos jogadores, O(n * log(n)).
 <br>
+
 ## Como Utilizar o Programa:
 1. **Compilar o Código:**
    - Copie e cole o código C em um arquivo com extensão `.c`.
