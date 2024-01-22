@@ -1,7 +1,6 @@
 # Jogo Rouba Montes
 
 O código em C apresenta a implementação do "Rouba Montes", um jogo de cartas onde o objetivo é acumular o maior número de cartas. O código utiliza estruturas de dados como pilhas, filas e listas para representar os elementos do jogo, como cartas, jogadores e a área de descarte. As funções implementadas gerenciam a criação, manipulação e limpeza dessas estruturas, além de aplicar as regras do jogo, como verificar se a carta da vez é igual a alguma carta na área de descarte, no próprio monte ou nos montes dos adversários. Ao final do jogo, o programa exibe um ranking dos jogadores com base no número de cartas em seus montes.
-
 <br>
 
 ## Funções:
