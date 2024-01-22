@@ -2,7 +2,7 @@
 
 O código em C apresenta a implementação do "Rouba Montes", um jogo de cartas onde o objetivo é acumular o maior número de cartas. O código utiliza estruturas de dados como pilhas, filas e listas para representar os elementos do jogo, como cartas, jogadores e a área de descarte. As funções implementadas gerenciam a criação, manipulação e limpeza dessas estruturas, além de aplicar as regras do jogo, como verificar se a carta da vez é igual a alguma carta na área de descarte, no próprio monte ou nos montes dos adversários. Ao final do jogo, o programa exibe um ranking dos jogadores com base no número de cartas em seus montes.
 
-
+<br>
 ## Funções:
 1. **imprimeCarta:** Recebe uma carta e imprime sua representação, considerando número e naipe.
 2. **aguardarEnter:** Pausa a execução e espera o usuário pressionar Enter.
@@ -39,8 +39,8 @@ O código em C apresenta a implementação do "Rouba Montes", um jogo de cartas 
 33. **ordenarJogadores:** Ordena os jogadores com base no número de cartas em seus montes usando o quicksort.
 34. **main:** Função principal que implementa o jogo de "Rouba Montes" seguindo as regras definidas.
 
+<br>
 ## TADs e estruturas de dados:
-
 1. **Carta**: Estrutura que representa uma carta do baralho, contendo número e naipe.
 2. **ElementoPilha**: Elemento da pilha que armazena uma carta e uma referência ao elemento anterior.
 3. **Pilha**: Estrutura de dados do tipo pilha, contendo um ponteiro para o topo.
@@ -49,13 +49,14 @@ O código em C apresenta a implementação do "Rouba Montes", um jogo de cartas 
 6. **ElementoLista**: Elemento da lista que armazena uma carta e uma referência ao próximo elemento.
 7. **Lista**: Estrutura de dados do tipo lista encadeada, contendo um ponteiro para o início.
 8. **Jogador**: Estrutura que representa um jogador, contendo um identificador, nome e uma pilha de cartas.
-<br><br>
 
+<br>
 ## Formato de Entrada dos Dados:
 1. **Quantidade de Jogadores (`njogadores`):** O usuário deve informar a quantidade de jogadores que participarão do jogo.
 2. **Informações dos Jogadores:** Para cada jogador, o usuário é solicitado a fornecer o nome do jogador.
 3. **Quantidade de Baralhos (`nbaralhos`):** O usuário informa a quantidade de baralhos utilizados no jogo. Um baralho padrão contém 52 cartas.
 
+<br>
 ## Formato de Saída dos Dados:
 1. **Informações Iniciais:**
    - Regras do jogo são exibidas.
@@ -77,6 +78,22 @@ O código em C apresenta a implementação do "Rouba Montes", um jogo de cartas 
    - Jogadores são classificados pelo número de cartas acumuladas.
    - Ranking é exibido com o número de cartas e as cartas de cada jogador.
 
+<br>
+## Complexidade:
+1. **Empilhar Embaralhado:**
+   - Complexidade de tempo: O(nbaralhos * 52), onde nbaralhos é o número de baralhos utilizados.
+   - Justificativa: A função percorre cada carta em todos os baralhos, realizando operações como atribuição e troca de elementos.
+2. **Avançar Turno:**
+   - Complexidade de tempo: O(1)
+   - Justificativa: A função envolve apenas operações de enfileiramento e desenfileiramento, ambas operações de tempo constante.
+3. **Diferente:**
+   - Complexidade de tempo: O(njogadores * 52)
+   - Justificativa: A função envolve iterações sobre o vetor de jogadores, cada uma envolvendo operações em pilhas que podem conter até 52 cartas.
+4. **Ordenar Jogadores (Quicksort):**
+   - Complexidade de tempo: O(njogadores * log(njogadores))
+   - Justificativa: O algoritmo de ordenação Quicksort tem uma complexidade média de O(n * log(n)), onde n é o número de elementos.
+
+<br>
 ## Como Utilizar o Programa:
 1. **Compilar o Código:**
    - Copie e cole o código C em um arquivo com extensão `.c`.
@@ -95,17 +112,3 @@ O código em C apresenta a implementação do "Rouba Montes", um jogo de cartas 
    - No final, o programa exibirá o ranking dos jogadores com base na quantidade de cartas em seus montes.
 6. **Encerramento:**
    - O programa será encerrado, e você pode visualizar os resultados do jogo.
-
-## Complexidade:
-1. **Empilhar Embaralhado:**
-   - Complexidade de tempo: O(nbaralhos * 52), onde nbaralhos é o número de baralhos utilizados.
-   - Justificativa: A função percorre cada carta em todos os baralhos, realizando operações como atribuição e troca de elementos.
-2. **Avançar Turno:**
-   - Complexidade de tempo: O(1)
-   - Justificativa: A função envolve apenas operações de enfileiramento e desenfileiramento, ambas operações de tempo constante.
-3. **Diferente:**
-   - Complexidade de tempo: O(njogadores * 52)
-   - Justificativa: A função envolve iterações sobre o vetor de jogadores, cada uma envolvendo operações em pilhas que podem conter até 52 cartas.
-4. **Ordenar Jogadores (Quicksort):**
-   - Complexidade de tempo: O(njogadores * log(njogadores))
-   - Justificativa: O algoritmo de ordenação Quicksort tem uma complexidade média de O(n * log(n)), onde n é o número de elementos.
